@@ -1,0 +1,18 @@
+---
+# tasks file for wireguard
+- name: Make parents directory
+  file:
+    path: /wireguard
+    state: directory
+
+- name: Make second directory
+  file:
+    path: /wireguard/config
+    state: directory
+
+- name: Copy templates
+  template:
+    src=docker-compose.j2
+    dest=/wireguard/docker-compose.yml
+
+
