@@ -12,7 +12,7 @@ services:
       - TZ=Europe/Yekaterinburg
       - SERVERURL={{ ansible_default_ipv4.address }}
       - SERVERPORT=51820
-      - PEERS=2
+      - PEERS={{ num_wg_peers }}
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
       - ALLOWEDIPS=10.13.13.0/24

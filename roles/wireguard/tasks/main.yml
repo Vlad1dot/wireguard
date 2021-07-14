@@ -1,5 +1,10 @@
 ---
 # tasks file for wireguard
+- name: Remove exiting directory
+  file:
+    path: /wireguard
+    state: absent
+
 - name: Make parents directory
   file:
     path: /wireguard
